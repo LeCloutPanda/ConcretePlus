@@ -1,0 +1,7 @@
+{
+      "parent": "minecraft:block/door_top_rh",
+      "textures": {
+        "top": "minecraft:block/light_blue_concrete",
+        "bottom": "minecraft:block/light_blue_concrete"
+      }
+    }

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+    "layer0": "pandamc_concreteplus:item/magenta_concrete_door"
+  }
+}

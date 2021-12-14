@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+      "pandamc_concreteplus:white_concrete_stairs",
+      "pandamc_concreteplus:orange_concrete_stairs",
+      "pandamc_concreteplus:magenta_concrete_stairs",
+      "pandamc_concreteplus:light_blue_concrete_stairs",
+      "pandamc_concreteplus:yellow_concrete_stairs",
+      "pandamc_concreteplus:lime_concrete_stairs",
+      "pandamc_concreteplus:pink_concrete_stairs",
+      "pandamc_concreteplus:gray_concrete_stairs",
+      "pandamc_concreteplus:light_gray_concrete_stairs",
+      "pandamc_concreteplus:cyan_concrete_stairs",
+      "pandamc_concreteplus:purple_concrete_stairs",
+      "pandamc_concreteplus:blue_concrete_stairs",
+      "pandamc_concreteplus:brown_concrete_stairs",
+      "pandamc_concreteplus:green_concrete_stairs",
+      "pandamc_concreteplus:red_concrete_stairs",
+      "pandamc_concreteplus:black_concrete_stairs"
+    ]
+  }

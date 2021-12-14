@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:red_concrete"
+    },
+    "result": "pandamc_concreteplus:red_concrete_door_powered",
+    "count": 1
+}

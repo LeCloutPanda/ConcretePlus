@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+    "layer0": "pandamc_concreteplus:item/light_gray_concrete_door"
+  }
+}

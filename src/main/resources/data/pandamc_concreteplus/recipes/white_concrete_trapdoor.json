@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:white_concrete"
+    },
+    "result": "pandamc_concreteplus:white_concrete_trapdoor",
+    "count": 1
+}

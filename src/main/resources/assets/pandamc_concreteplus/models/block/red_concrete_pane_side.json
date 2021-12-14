@@ -1,0 +1,7 @@
+{
+      "parent": "minecraft:block/template_glass_pane_side",
+      "textures": {
+        "pane": "minecraft:block/red_concrete",
+        "edge": "minecraft:block/red_concrete"
+      }
+    }

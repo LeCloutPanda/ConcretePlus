@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "pandamc_concreteplus:white_concrete_button",
+    "pandamc_concreteplus:orange_concrete_button",
+    "pandamc_concreteplus:magenta_concrete_button",
+    "pandamc_concreteplus:light_blue_concrete_button",
+    "pandamc_concreteplus:yellow_concrete_button",
+    "pandamc_concreteplus:lime_concrete_button",
+    "pandamc_concreteplus:pink_concrete_button",
+    "pandamc_concreteplus:gray_concrete_button",
+    "pandamc_concreteplus:light_gray_concrete_button",
+    "pandamc_concreteplus:cyan_concrete_button",
+    "pandamc_concreteplus:purple_concrete_button",
+    "pandamc_concreteplus:blue_concrete_button",
+    "pandamc_concreteplus:brown_concrete_button",
+    "pandamc_concreteplus:green_concrete_button",
+    "pandamc_concreteplus:red_concrete_button",
+    "pandamc_concreteplus:black_concrete_button"
+  ]
+}

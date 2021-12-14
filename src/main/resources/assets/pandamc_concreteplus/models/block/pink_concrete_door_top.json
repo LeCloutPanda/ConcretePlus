@@ -1,0 +1,7 @@
+{
+      "parent": "minecraft:block/door_top",
+      "textures": {
+        "top": "minecraft:block/pink_concrete",
+        "bottom": "minecraft:block/pink_concrete"
+      }
+    }

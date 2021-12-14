@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+      "pandamc_concreteplus:white_concrete_fence",
+      "pandamc_concreteplus:orange_concrete_fence",
+      "pandamc_concreteplus:magenta_concrete_fence",
+      "pandamc_concreteplus:light_blue_concrete_fence",
+      "pandamc_concreteplus:yellow_concrete_fence",
+      "pandamc_concreteplus:lime_concrete_fence",
+      "pandamc_concreteplus:pink_concrete_fence",
+      "pandamc_concreteplus:gray_concrete_fence",
+      "pandamc_concreteplus:light_gray_concrete_fence",
+      "pandamc_concreteplus:cyan_concrete_fence",
+      "pandamc_concreteplus:purple_concrete_fence",
+      "pandamc_concreteplus:blue_concrete_fence",
+      "pandamc_concreteplus:brown_concrete_fence",
+      "pandamc_concreteplus:green_concrete_fence",
+      "pandamc_concreteplus:red_concrete_fence",
+      "pandamc_concreteplus:black_concrete_fence"
+    ]
+  }

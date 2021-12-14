@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "pandamc_concreteplus",
+  "version": "${version}",
+
+  "name": "Concrete Plus",
+  "description": "Adds various new blocks and recipes based on concrete and its many colours.",
+  "authors": [
+    "LeCloutPanda"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/concrete-plus",
+    "sources": "N/A"
+  },
+
+  "license": "CC-BY-NC-SA",
+  "icon": "assets/pandamc_concreteplus/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.concreteplus.panda.ConcretePlus"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}

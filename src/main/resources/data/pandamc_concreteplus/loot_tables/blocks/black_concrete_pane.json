@@ -1,0 +1,19 @@
+{
+      "type": "minecraft:block",
+      "pools": [
+        {
+          "rolls": 1,
+          "entries": [
+            {
+              "type": "minecraft:item",
+              "name": "pandamc_concreteplus:black_concrete_pane"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ]
+        }
+      ]
+    }

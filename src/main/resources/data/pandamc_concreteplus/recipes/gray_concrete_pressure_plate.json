@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:gray_concrete"
+    },
+    "result": "pandamc_concreteplus:gray_concrete_pressure_plate",
+    "count": 1
+}

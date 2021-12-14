@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+      "pandamc_concreteplus:white_concrete_slab",
+      "pandamc_concreteplus:orange_concrete_slab",
+      "pandamc_concreteplus:magenta_concrete_slab",
+      "pandamc_concreteplus:light_blue_concrete_slab",
+      "pandamc_concreteplus:yellow_concrete_slab",
+      "pandamc_concreteplus:lime_concrete_slab",
+      "pandamc_concreteplus:pink_concrete_slab",
+      "pandamc_concreteplus:gray_concrete_slab",
+      "pandamc_concreteplus:light_gray_concrete_slab",
+      "pandamc_concreteplus:cyan_concrete_slab",
+      "pandamc_concreteplus:purple_concrete_slab",
+      "pandamc_concreteplus:blue_concrete_slab",
+      "pandamc_concreteplus:brown_concrete_slab",
+      "pandamc_concreteplus:green_concrete_slab",
+      "pandamc_concreteplus:red_concrete_slab",
+      "pandamc_concreteplus:black_concrete_slab"
+    ]
+  }

@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+      "pandamc_concreteplus:white_concrete_wall",
+      "pandamc_concreteplus:orange_concrete_wall",
+      "pandamc_concreteplus:magenta_concrete_wall",
+      "pandamc_concreteplus:light_blue_concrete_wall",
+      "pandamc_concreteplus:yellow_concrete_wall",
+      "pandamc_concreteplus:lime_concrete_wall",
+      "pandamc_concreteplus:pink_concrete_wall",
+      "pandamc_concreteplus:gray_concrete_wall",
+      "pandamc_concreteplus:light_gray_concrete_wall",
+      "pandamc_concreteplus:cyan_concrete_wall",
+      "pandamc_concreteplus:purple_concrete_wall",
+      "pandamc_concreteplus:blue_concrete_wall",
+      "pandamc_concreteplus:brown_concrete_wall",
+      "pandamc_concreteplus:green_concrete_wall",
+      "pandamc_concreteplus:red_concrete_wall",
+      "pandamc_concreteplus:black_concrete_wall"
+    ]
+  }
