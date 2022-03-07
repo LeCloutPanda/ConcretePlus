@@ -1,9 +1,7 @@
 package com.concreteplus.panda.registry;
 
-import com.concreteplus.panda.ConcretePlus;
-import com.concreteplus.panda.custom.*;
-
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -12,18 +10,34 @@ import net.minecraft.block.PressurePlateBlock.ActivationRule;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import com.concreteplus.panda.ConcretePlus;
+import com.concreteplus.panda.custom.CustomButton;
+import com.concreteplus.panda.custom.CustomCarpet;
+import com.concreteplus.panda.custom.CustomDoor;
+import com.concreteplus.panda.custom.CustomFence;
+import com.concreteplus.panda.custom.CustomFenceGate;
+import com.concreteplus.panda.custom.CustomPane;
+import com.concreteplus.panda.custom.CustomPressurePlate;
+import com.concreteplus.panda.custom.CustomSlab;
+import com.concreteplus.panda.custom.CustomStairs;
+import com.concreteplus.panda.custom.CustomTrapDoor;
+import com.concreteplus.panda.custom.CustomVerticalSlab;
+import com.concreteplus.panda.custom.CustomWall;
 
 public class ModBlocks {
-    public static final FabricBlockSettings concrete = FabricBlockSettings.of(Material.STONE, DyeColor.WHITE).strength(1.8F);
-    public static final Settings concrete_metal = FabricBlockSettings.of(Material.METAL, DyeColor.WHITE).strength(1.8F);
+    public String modId = "pandamc_concreteplus";
 
+    public static final FabricBlockSettings concrete = FabricBlockSettings.of(Material.STONE, DyeColor.WHITE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 0).strength(1.8F);
+    public static final Settings concrete_metal = FabricBlockSettings.of(Material.METAL, DyeColor.WHITE).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool().strength(1.8F);
+    
     public static final ItemGroup building = ConcretePlus.concrete_plus_building_group;
     public static final ItemGroup redstone = ConcretePlus.concrete_plus_redstone_group;
 
-    static String[] colors = { "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black" };
+    public static String[] colors = { "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black" };
     
     private static Item registerNewElement(String path, Block entry, int index, ItemGroup group) {
         Block current = Registry.register(Registry.BLOCK, new Identifier("pandamc_concreteplus", colors[index] + path), entry);
