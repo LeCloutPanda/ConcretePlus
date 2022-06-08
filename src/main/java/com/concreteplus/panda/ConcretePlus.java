@@ -1,5 +1,7 @@
 package com.concreteplus.panda;
 
+import com.concreteplus.panda.registry.ModBlocks;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Blocks;
@@ -7,11 +9,9 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-import com.concreteplus.panda.registry.ModBlocks;
-
 public class ConcretePlus implements ModInitializer {
 	
-	public ModBlocks blocks = new ModBlocks();
+	ModBlocks blocks = new ModBlocks();
 
 	public static final ItemGroup concrete_plus_building_group = FabricItemGroupBuilder.build(
 		new Identifier("pandamc_concreteplus", "concrete_plus_building_group"), 
