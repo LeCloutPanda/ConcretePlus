@@ -17,8 +17,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
-    public static final FabricBlockSettings concrete = FabricBlockSettings.of(Material.STONE, DyeColor.WHITE).strength(1.8F);
-    public static final Settings concrete_metal = FabricBlockSettings.of(Material.METAL, DyeColor.WHITE).strength(1.8F);
+    public static final Block wc = Blocks.WHITE_CONCRETE;
+
+    public static final Settings concrete = Settings.of(Material.STONE).strength(wc.getBlastResistance()).hardness(wc.getHardness());
+    public static final Settings concrete_metal = Settings.of(Material.METAL).strength(wc.getBlastResistance()).hardness(wc.getHardness());
 
     public static final ItemGroup building = ConcretePlus.concrete_plus_building_group;
     public static final ItemGroup redstone = ConcretePlus.concrete_plus_redstone_group;
@@ -44,9 +46,9 @@ public class ModBlocks {
             registerNewElement("_concrete_trapdoor", new CustomTrapDoor(concrete), i, redstone); // Done
             registerNewElement("_concrete_door_powered", new CustomDoor(concrete_metal), i, redstone); // Done
             registerNewElement("_concrete_trapdoor_powered", new CustomTrapDoor(concrete_metal), i, redstone); // Done
-            registerNewElement("_concrete_pressure_plate", new CustomPressurePlate(ActivationRule.EVERYTHING, concrete), i, redstone);
-            registerNewElement("_concrete_weighted_pressure_plate", new CustomPressurePlate(ActivationRule.MOBS, concrete), i, redstone);
-            registerNewElement("_concrete_button", new CustomButton(concrete), i, redstone);
+            registerNewElement("_concrete_pressure_plate", new CustomPressurePlate(ActivationRule.EVERYTHING, concrete), i, redstone); // Done
+            registerNewElement("_concrete_weighted_pressure_plate", new CustomPressurePlate(ActivationRule.MOBS, concrete), i, redstone); // Done
+            registerNewElement("_concrete_button", new CustomButton(concrete), i, redstone); // Done
         }
     }
 }

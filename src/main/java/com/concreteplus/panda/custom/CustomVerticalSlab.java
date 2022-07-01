@@ -15,7 +15,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 
-public class CustomVerticalSlab extends HorizontalFacingBlock {
+public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterloggable {
 
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
@@ -25,7 +25,7 @@ public class CustomVerticalSlab extends HorizontalFacingBlock {
 
     public CustomVerticalSlab(Settings settings){
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH).with(WATERLOGGED, false));
     }
 
     @Override
