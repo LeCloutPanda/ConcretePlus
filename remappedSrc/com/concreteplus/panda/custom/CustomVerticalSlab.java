@@ -3,12 +3,11 @@ package com.concreteplus.panda.custom;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.WaterFluid;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -39,13 +38,11 @@ public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterlo
         return BlockRenderType.MODEL;
     }
 
-    // TODO: Fix water logging
-
     @Override
     public BlockState getPlacementState(ItemPlacementContext itemPlacementContext) {
         FluidState fluidState = itemPlacementContext.getWorld().getFluidState(itemPlacementContext.getBlockPos());
-        //boolean waterLog = fluidState.isIn() && fluidState.getLevel() == 8;
-        return super.getPlacementState(itemPlacementContext).with(WATERLOGGED, false)
+        boolean waterLog = fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8;
+        return super.getPlacementState(itemPlacementContext).with(WATERLOGGED, waterLog)
                 .with(FACING, itemPlacementContext.getPlayerFacing().getOpposite());
     }
 
