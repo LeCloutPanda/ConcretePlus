@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.concreteplus.panda.ConcretePlus"
+      "dev.concreteplus.panda.ConcretePlus"
     ]
   },
   "depends": {

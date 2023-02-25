@@ -42,7 +42,6 @@ public class ConcretePlus implements ModInitializer {
     }
 
     private static void RegisterBlocksAndItems() {
-
         for (int i = 0; i < colors.length; i++) {
             registerNewElement("_concrete_slab", new CustomSlab(concrete), i);
             registerNewElement("_concrete_vertical_slab", new CustomVerticalSlab(concrete), i);
@@ -52,8 +51,8 @@ public class ConcretePlus implements ModInitializer {
             registerNewElement("_concrete_wall", new CustomWall(concrete), i);
             registerNewElement("_concrete_carpet", new CustomCarpet(concrete), i);
             registerNewElement("_concrete_pane", new CustomPane(concrete), i);
-            registerNewElement("_concrete_door", new CustomDoor(concrete, SoundEvents.BLOCK_IRON_DOOR_CLOSE, SoundEvents.BLOCK_IRON_DOOR_OPEN), i);
-            registerNewElement("_concrete_trapdoor", new CustomTrapDoor(concrete, SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE, SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN), i);
+            registerNewElement("_concrete_door", new CustomDoor(concrete, SoundEvents.BLOCK_WOODEN_DOOR_CLOSE, SoundEvents.BLOCK_WOODEN_DOOR_OPEN), i);
+            registerNewElement("_concrete_trapdoor", new CustomTrapDoor(concrete, SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE, SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN), i);
             registerNewElement("_concrete_door_powered", new CustomDoor(concrete_metal,  SoundEvents.BLOCK_IRON_DOOR_CLOSE, SoundEvents.BLOCK_IRON_DOOR_OPEN), i);
             registerNewElement("_concrete_trapdoor_powered", new CustomTrapDoor(concrete_metal, SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE, SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN), i);
             registerNewElement("_concrete_pressure_plate", new CustomPressurePlate(ActivationRule.EVERYTHING, concrete, SoundEvents.BLOCK_STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.BLOCK_STONE_PRESSURE_PLATE_CLICK_ON), i);
