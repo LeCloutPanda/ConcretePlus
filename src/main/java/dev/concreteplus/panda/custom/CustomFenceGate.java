@@ -1,4 +1,4 @@
-package com.concreteplus.panda.custom;
+package dev.concreteplus.panda.custom;
 
 import net.minecraft.block.FenceGateBlock;
 import net.minecraft.sound.SoundEvent;
