@@ -1,11 +1,10 @@
 package dev.concreteplus.panda.custom;
 
+import net.minecraft.block.BlockSetType;
 import net.minecraft.block.ButtonBlock;
-import net.minecraft.sound.SoundEvent;
 
 public class CustomButton extends ButtonBlock {
-
-    public CustomButton(Settings settings, int pressTicks, boolean wooden, SoundEvent clickOffSound, SoundEvent clickOnSound) {
-        super(settings, pressTicks, wooden, clickOffSound, clickOnSound);
-    }     
+    public CustomButton(Settings settings, BlockSetType blockSetType, int pressTicks, boolean wooden) {
+        super(settings, blockSetType, pressTicks, wooden);
+    }
 }

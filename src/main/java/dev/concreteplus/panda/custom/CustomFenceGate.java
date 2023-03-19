@@ -1,11 +1,10 @@
 package dev.concreteplus.panda.custom;
 
 import net.minecraft.block.FenceGateBlock;
-import net.minecraft.sound.SoundEvent;
+import net.minecraft.block.WoodType;
 
 public class CustomFenceGate extends FenceGateBlock{
-
-    public CustomFenceGate(Settings settings, SoundEvent closeSound, SoundEvent openSound) {
-        super(settings, closeSound, openSound);
+    public CustomFenceGate(Settings settings, WoodType type) {
+        super(settings, type);
     }
 }
