@@ -1,5 +1,7 @@
 package dev.concreteplus.panda.custom;
 
+import BlockRenderType;
+import BlockState;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;

@@ -1,10 +1,11 @@
 package dev.concreteplus.panda.custom;
 
-import net.minecraft.block.BlockSetType;
-import net.minecraft.block.ButtonBlock;
+import net.minecraft.block.WoodenButtonBlock;
 
-public class CustomButton extends ButtonBlock {
-    public CustomButton(Settings settings, BlockSetType blockSetType, int pressTicks, boolean wooden) {
-        super(settings, blockSetType, pressTicks, wooden);
+public class CustomButton extends WoodenButtonBlock {
+
+    public CustomButton(Settings settings) {
+        super(settings);
     }
+    
 }
