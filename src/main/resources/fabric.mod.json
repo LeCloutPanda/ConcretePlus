@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "pandamc_concreteplus",
-  "version": "1.9.7",
+  "version": "1.0.0",
   "name": "Concrete Plus",
   "description": "Adds various new blocks and recipes based on concrete and its many colours.",
   "authors": [

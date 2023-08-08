@@ -13,9 +13,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
 
 
-public class CustomVerticalSlab extends HorizontalFacingBlock {
+public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterloggable {
 
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
@@ -29,10 +30,20 @@ public class CustomVerticalSlab extends HorizontalFacingBlock {
     }
 
     @Override
-    public FluidState getFluidState(BlockState blockState_1) {
-        return (Boolean)blockState_1.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(blockState_1);
+    public FluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
+
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (state.get(WATERLOGGED)) {
+            world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+ 
+        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+    
     @Override
     public BlockRenderType getRenderType(BlockState blockState_1) {
         return BlockRenderType.MODEL;
