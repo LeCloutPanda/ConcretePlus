@@ -34,8 +34,6 @@ public class ConcretePlus implements ModInitializer {
     public static final FabricBlockSettings concrete = FabricBlockSettings.of(Material.STONE, DyeColor.WHITE).strength(1.8F);
     public static final FabricBlockSettings concrete_metal = FabricBlockSettings.of(Material.METAL, DyeColor.WHITE).strength(1.8F);
 
-    public static final ItemGroup building = ConcretePlus.concrete_plus_building_group;
-
     static String[] colors = { "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black" };
     
     private static Item registerNewElement(String path, Block entry, int index, ItemGroup group) {
@@ -45,21 +43,21 @@ public class ConcretePlus implements ModInitializer {
 
 	public void init() {
         for (int i = 0; i < colors.length; i++) {
-            registerNewElement("_concrete_slab", new CustomSlab(concrete), i, building);
-            registerNewElement("_concrete_vertical_slab", new CustomVerticalSlab(concrete), i, building); 
-            registerNewElement("_concrete_stairs", new CustomStairs(Blocks.WHITE_CONCRETE.getDefaultState(), concrete), i, building);
-            registerNewElement("_concrete_fence", new CustomFence(concrete), i, building); 
-            registerNewElement("_concrete_fence_gate", new CustomFenceGate(concrete), i, building); 
-            registerNewElement("_concrete_wall", new CustomWall(concrete), i, building);
-            registerNewElement("_concrete_carpet", new CustomCarpet(concrete), i, building);
-            registerNewElement("_concrete_pane", new CustomPane(concrete), i, building); 
-            registerNewElement("_concrete_door", new CustomDoor(concrete), i, building); 
-            registerNewElement("_concrete_trapdoor", new CustomTrapDoor(concrete), i, building);
-            registerNewElement("_concrete_door_powered", new CustomDoor(concrete_metal), i, building);
-            registerNewElement("_concrete_trapdoor_powered", new CustomTrapDoor(concrete_metal), i, building);
-            registerNewElement("_concrete_pressure_plate", new CustomPressurePlate(ActivationRule.EVERYTHING, concrete), i, building);
-            registerNewElement("_concrete_weighted_pressure_plate", new CustomPressurePlate(ActivationRule.MOBS, concrete), i, building);
-            registerNewElement("_concrete_button", new CustomButton(concrete), i, building);
+            registerNewElement("_concrete_slab", new CustomSlab(concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_vertical_slab", new CustomVerticalSlab(concrete), i, concrete_plus_building_group); 
+            registerNewElement("_concrete_stairs", new CustomStairs(Blocks.WHITE_CONCRETE.getDefaultState(), concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_fence", new CustomFence(concrete), i, concrete_plus_building_group); 
+            registerNewElement("_concrete_fence_gate", new CustomFenceGate(concrete), i, concrete_plus_building_group); 
+            registerNewElement("_concrete_wall", new CustomWall(concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_carpet", new CustomCarpet(concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_pane", new CustomPane(concrete), i, concrete_plus_building_group); 
+            registerNewElement("_concrete_door", new CustomDoor(concrete), i, concrete_plus_building_group); 
+            registerNewElement("_concrete_trapdoor", new CustomTrapDoor(concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_door_powered", new CustomDoor(concrete_metal), i, concrete_plus_building_group);
+            registerNewElement("_concrete_trapdoor_powered", new CustomTrapDoor(concrete_metal), i, concrete_plus_building_group);
+            registerNewElement("_concrete_pressure_plate", new CustomPressurePlate(ActivationRule.EVERYTHING, concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_weighted_pressure_plate", new CustomPressurePlate(ActivationRule.MOBS, concrete), i, concrete_plus_building_group);
+            registerNewElement("_concrete_button", new CustomButton(concrete), i, concrete_plus_building_group);
         }
     }
 
