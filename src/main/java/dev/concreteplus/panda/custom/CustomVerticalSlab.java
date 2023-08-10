@@ -14,7 +14,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterloggable {
-
+    
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public CustomVerticalSlab(Settings settings){
@@ -29,7 +29,7 @@ public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterlo
 
     @Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+		return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getPlayerLookDirection().getOpposite());
 	}
 
     @Override
@@ -55,11 +55,7 @@ public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterlo
         }
     }
 
-    @Override
     public FluidState getFluidState(BlockState state) {
-        if (state.get(WATERLOGGED).booleanValue()) {
-            return Fluids.WATER.getStill(false);
-        }
-        return super.getFluidState(state);
+        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 }
