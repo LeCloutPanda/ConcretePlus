@@ -32,7 +32,7 @@ public class ConcretePlus implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("pandamc_conreteplus");
 
     static List<Item> customItems = new LinkedList<Item>();  
-	static ItemGroup concrete_plus_building_group;
+	static ItemGroup concrete_plus_group;
 
 	public static final Settings concrete = Settings.copy(Blocks.WHITE_CONCRETE).strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness());
     public static final Settings concrete_metal = Settings.copy(Blocks.WHITE_CONCRETE).strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness());
@@ -65,9 +65,9 @@ public class ConcretePlus implements ModInitializer {
             registerNewElement("_concrete_button",                  new CustomButton(concrete, BlockSetType.STONE, 10, false), i);
         }
 
-        concrete_plus_building_group = FabricItemGroup.builder()
+        concrete_plus_group = FabricItemGroup.builder()
         .icon(() -> new ItemStack(customItems.get(0)))
-        .displayName(Text.translatable(new Identifier(modId, "concrete_plus_group").toString()))
+        .displayName(Text.translatable("itemGroup.pandamc_concreteplus.concrete_plus_group"))
         .entries((context, entries) -> {
             for (int i = 0; i < customItems.size(); i++) {
                 entries.add(customItems.get(i));
@@ -75,7 +75,7 @@ public class ConcretePlus implements ModInitializer {
         })
         .build();
 
-        Registry.register(Registries.ITEM_GROUP, new Identifier(modId, "concrete_plus_group"), concrete_plus_building_group);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(modId, "concrete_plus_group"), concrete_plus_group);
     }
 
     @Override
