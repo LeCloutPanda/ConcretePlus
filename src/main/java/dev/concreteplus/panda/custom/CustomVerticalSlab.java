@@ -1,6 +1,7 @@
 package dev.concreteplus.panda.custom;
 
 import net.minecraft.block.*;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -54,12 +55,13 @@ public class CustomVerticalSlab extends HorizontalFacingBlock implements Waterlo
                 return VoxelShapes.fullCube();
         }
     }
-
+    
     @Override
     public FluidState getFluidState(BlockState state) {
-        if (state.get(WATERLOGGED).booleanValue()) {
+        if (state.get(Properties.WATERLOGGED).booleanValue()) {
             return Fluids.WATER.getStill(false);
         }
-        return super.getFluidState(state);
+        // return state.getFluidState();
+        return state.getFluidState();
     }
 }

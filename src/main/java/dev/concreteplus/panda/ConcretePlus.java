@@ -10,12 +10,10 @@ import dev.concreteplus.panda.ConcretePlus;
 import dev.concreteplus.panda.custom.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
 import net.minecraft.block.WoodType;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.PressurePlateBlock.ActivationRule;
@@ -25,6 +23,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 
 public class ConcretePlus implements ModInitializer {
 
@@ -35,8 +34,9 @@ public class ConcretePlus implements ModInitializer {
     static List<Item> customItems = new LinkedList<Item>();  
 	static ItemGroup concrete_plus_building_group;
 
-	public static final Settings concrete = Settings.of(Material.STONE).strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness());
-    public static final Settings concrete_metal = Settings.of(Material.METAL).strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness());
+	public static final Settings concrete = Settings.copy(Blocks.WHITE_CONCRETE).strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness());
+    public static final Settings concrete_metal = Settings.copy(Blocks.WHITE_CONCRETE).strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness());
+    
     static String[] colors = { "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black" };
 
     private static Item registerNewElement(String path, Block entry, int index) {
@@ -58,22 +58,24 @@ public class ConcretePlus implements ModInitializer {
             registerNewElement("_concrete_pane",                    new CustomPane(concrete), i);
             registerNewElement("_concrete_door",                    new CustomDoor(concrete, BlockSetType.STONE), i);
             registerNewElement("_concrete_trapdoor",                new CustomTrapDoor(concrete, BlockSetType.STONE), i);
-            registerNewElement("_concrete_door_powered",            new CustomDoor(concrete_metal, BlockSetType.STONE), i);
-            registerNewElement("_concrete_trapdoor_powered",        new CustomTrapDoor(concrete_metal, BlockSetType.STONE), i);
+            registerNewElement("_concrete_door_powered",            new CustomDoor(concrete_metal, BlockSetType.IRON), i);
+            registerNewElement("_concrete_trapdoor_powered",        new CustomTrapDoor(concrete_metal, BlockSetType.IRON), i);
             registerNewElement("_concrete_pressure_plate",          new CustomPressurePlate(ActivationRule.EVERYTHING, concrete, BlockSetType.STONE), i);
             registerNewElement("_concrete_weighted_pressure_plate", new CustomPressurePlate(ActivationRule.MOBS, concrete, BlockSetType.STONE), i);
             registerNewElement("_concrete_button",                  new CustomButton(concrete, BlockSetType.STONE, 10, false), i);
         }
 
-        concrete_plus_building_group = FabricItemGroup.builder(new Identifier(modId, "concrete_plus_group"))
-        .icon(() -> new ItemStack(customItems.get(0))) 
-        .build();
-
-        ItemGroupEvents.modifyEntriesEvent(concrete_plus_building_group).register(entries -> {
+        concrete_plus_building_group = FabricItemGroup.builder()
+        .icon(() -> new ItemStack(customItems.get(0)))
+        .displayName(Text.translatable(new Identifier(modId, "concrete_plus_group").toString()))
+        .entries((context, entries) -> {
             for (int i = 0; i < customItems.size(); i++) {
                 entries.add(customItems.get(i));
             }
-        });
+        })
+        .build();
+
+        Registry.register(Registries.ITEM_GROUP, new Identifier(modId, "concrete_plus_group"), concrete_plus_building_group);
     }
 
     @Override
