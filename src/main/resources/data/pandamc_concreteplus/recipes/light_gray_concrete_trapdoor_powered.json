@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "minecraft:light_gray_concrete"
-    },
-    "result": "pandamc_concreteplus:light_gray_concrete_trapdoor_powered",
-    "count": 1
-}
