@@ -6,6 +6,6 @@ import net.minecraft.block.DoorBlock;
 public class CustomDoor extends DoorBlock {
 
     public CustomDoor(Settings settings, BlockSetType blockSetType) {
-        super(settings, blockSetType);
+        super(blockSetType, settings);
     }
 }

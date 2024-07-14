@@ -32,8 +32,10 @@ bin/
 
 run/
 
-# Ignore Gradle project-specific cache directory
-.gradle
+# java
 
-# Ignore Gradle build output directory
-build
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+/remappedSrc
