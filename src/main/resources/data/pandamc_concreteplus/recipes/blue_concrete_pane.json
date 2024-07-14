@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "minecraft:blue_concrete"
-    },
-    "result": "pandamc_concreteplus:blue_concrete_pane",
-    "count": 1
-}

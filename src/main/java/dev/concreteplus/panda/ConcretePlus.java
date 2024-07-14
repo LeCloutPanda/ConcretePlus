@@ -10,14 +10,11 @@ import dev.concreteplus.panda.ConcretePlus;
 import dev.concreteplus.panda.custom.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.WoodType;
-import net.minecraft.block.enums.NoteBlockInstrument;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -25,16 +22,14 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 
 public class ConcretePlus implements ModInitializer {
-
     private static final String modId = "pandamc_concreteplus";
-    public static final Logger LOGGER = LoggerFactory.getLogger("pandamc_conreteplus");
+    public static final Logger LOGGER = LoggerFactory.getLogger("pandamc_concreteplus");
 
     private static final String[] colors = { "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black" };
-    private static final Settings settings = Settings.copy(Blocks.WHITE_CONCRETE).requiresTool().strength(Blocks.WHITE_CONCRETE.getBlastResistance()).hardness(Blocks.WHITE_CONCRETE.getHardness()).sounds(BlockSoundGroup.STONE);
+    private static final Settings settings = Settings.copy(Blocks.WHITE_CONCRETE).requiresTool();
 
     private static List<Item> customItems = new LinkedList<Item>();  
 	private static ItemGroup concrete_plus_group;

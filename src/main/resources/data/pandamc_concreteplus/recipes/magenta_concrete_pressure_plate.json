@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "minecraft:magenta_concrete"
-    },
-    "result": "pandamc_concreteplus:magenta_concrete_pressure_plate",
-    "count": 1
-}
